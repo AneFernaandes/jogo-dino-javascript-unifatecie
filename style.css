@@ -1,0 +1,73 @@
+
+/* janela do jogo */
+
+.game{
+width: 600px;
+height: 200px;
+border: 1px solid black;
+margin: auto;
+position: relative;
+overflow: hidden;
+}
+
+/* chao */
+
+#chao{
+    position: absolute;
+    bottom:0;
+
+    height: 20px;
+    width: 100%;
+  
+    background-image: url("img/ground.png");
+    z-index: 1;
+}
+
+/* cacto */
+
+#cacto{
+    position: absolute;
+    bottom: 5px;
+    left: 96%;
+    width: 25px;
+    height: 50px;
+    background-image: url("cactus/cactus1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+}
+
+
+/* dino */
+
+#dino{
+    position: absolute;
+    bottom: 0;
+    left: 20px;   
+
+    height: 50px;
+    width: 50px;
+
+    background-image: url("dino/normal.png");
+    background-size: 50px 50px;
+    z-index: 3;
+
+}
+
+/* animacao do pulo */
+
+.pulo{
+   position: relative; 
+   animation: pulo 0.5s ease-in-out;
+}
+
+@keyframes pulo {
+    0%,100%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-110px);
+    }
+
+}
