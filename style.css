@@ -1,31 +1,30 @@
-
 /* janela do jogo */
 
-.game{
-width: 600px;
-height: 200px;
-border: 1px solid black;
-margin: auto;
-position: relative;
-overflow: hidden;
+.game {
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
 }
 
 /* chao */
 
-#chao{
+#chao {
     position: absolute;
-    bottom:0;
+    bottom: 0;
 
     height: 20px;
     width: 100%;
-  
+
     background-image: url("img/ground.png");
     z-index: 1;
 }
 
 /* cacto */
 
-#cacto{
+#cacto {
     position: absolute;
     bottom: 5px;
     left: 96%;
@@ -41,10 +40,10 @@ overflow: hidden;
 
 /* dino */
 
-#dino{
+#dino {
     position: absolute;
     bottom: 0;
-    left: 20px;   
+    left: 20px;
 
     height: 50px;
     width: 50px;
@@ -57,17 +56,50 @@ overflow: hidden;
 
 /* animacao do pulo */
 
-.pulo{
-   position: relative; 
-   animation: pulo 0.5s ease-in-out;
+.pulo {
+    position: relative;
+    animation: pulo 0.5s ease-in-out;
 }
 
 @keyframes pulo {
-    0%,100%{
+
+    0%,
+    100% {
         transform: translateY(0)
     }
-    50%{
+
+    50% {
         transform: translateY(-110px);
     }
 
+}
+
+
+/* nuvem */
+
+#nuvem {
+    top: 20%;
+    left: 90%; 
+    position: absolute;
+    background-image: url("img/cloud.png");
+    width: 90px;
+    height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* gameover */
+
+#gameover{
+    position: absolute;
+    /* gameover sumir, só aparecer quando o usuário perder */
+    visibility: hidden;
+    top: 50%;
+    left: 30%;
+    background-image: url("img/gameover.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 22px;   
 }
